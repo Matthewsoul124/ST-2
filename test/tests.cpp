@@ -1,8 +1,8 @@
 // Copyright 2024 UNN-CS
-#include <gtest/gtest.h>
-#include <cmath>
 #include "circle.h"
 #include "tasks.h"
+#include <cmath>
+#include <gtest/gtest.h>
 
 TEST(CircleTest, ConstructorTest) {
   Circle c(5.0);
