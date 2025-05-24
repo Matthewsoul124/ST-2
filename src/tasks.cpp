@@ -1,5 +1,6 @@
-#include "../include/tasks.h"
-#include "../include/circle.h"
+// Copyright 2024 UNN-CS
+#include "tasks.h"
+#include "circle.h"
 #include <cmath>
 
 double calculateEarthRopeGap() {

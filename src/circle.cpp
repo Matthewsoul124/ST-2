@@ -2,6 +2,7 @@
 #include "circle.h"
 #include <cmath>
 #include <cstdint>
+#include <stdexcept>
 
 const double PI = 3.14159265358979323846;
 

@@ -1,7 +1,6 @@
-// Copyright 2025 UNN-CS Team
-
-#include "../include/circle.h"
-#include "../include/tasks.h"
+// Copyright 2024 UNN-CS
+#include "circle.h"
+#include "tasks.h"
 #include <cmath>
 #include <gtest/gtest.h>
 

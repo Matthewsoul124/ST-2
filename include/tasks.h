@@ -1,5 +1,6 @@
-#ifndef TASKS_H
-#define TASKS_H
+// Copyright 2024 UNN-CS
+#ifndef INCLUDE_TASKS_H_
+#define INCLUDE_TASKS_H_
 
 // Функция для решения задачи "Земля и верёвка"
 // Возвращает величину зазора в метрах
@@ -14,4 +15,4 @@ struct PoolCalculationResult {
 
 PoolCalculationResult calculatePoolCosts();
 
-#endif // TASKS_H 
+#endif  // INCLUDE_TASKS_H_ 
