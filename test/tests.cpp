@@ -73,6 +73,38 @@ TEST(CircleTest, PrecisionTest) {
   EXPECT_NEAR(c.getArea(), expectedArea, 1e-10);
 }
 
+TEST(CircleTest, LargeValuePrecisionTest) {
+  Circle c(1e9);
+  double expectedFerence = 2 * M_PI * 1e9;
+  double expectedArea = M_PI * 1e9 * 1e9;
+  EXPECT_NEAR(c.getFerence(), expectedFerence, 1e-3);
+  EXPECT_NEAR(c.getArea(), expectedArea, 1e-3);
+}
+
+TEST(CircleTest, SequentialRadiusChangesTest) {
+  Circle c(1.0);
+  c.setRadius(2.0);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 2.0);
+  c.setRadius(3.0);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 3.0);
+  c.setRadius(1.0);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 1.0);
+  EXPECT_DOUBLE_EQ(c.getFerence(), 2 * M_PI);
+  EXPECT_DOUBLE_EQ(c.getArea(), M_PI);
+}
+
+TEST(CircleTest, BoundaryValuesTest) {
+  Circle c(1e-10);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 1e-10);
+  EXPECT_DOUBLE_EQ(c.getFerence(), 2 * M_PI * 1e-10);
+  EXPECT_DOUBLE_EQ(c.getArea(), M_PI * 1e-10 * 1e-10);
+  
+  c.setRadius(1e10);
+  EXPECT_DOUBLE_EQ(c.getRadius(), 1e10);
+  EXPECT_DOUBLE_EQ(c.getFerence(), 2 * M_PI * 1e10);
+  EXPECT_DOUBLE_EQ(c.getArea(), M_PI * 1e10 * 1e10);
+}
+
 // Тесты для задачи "Земля и верёвка"
 TEST(EarthRopeTest, BasicTest) {
   double gap = calculateEarthRopeGap();
