@@ -98,7 +98,6 @@ TEST(CircleTest, BoundaryValuesTest) {
   EXPECT_DOUBLE_EQ(c.getRadius(), 1e-10);
   EXPECT_DOUBLE_EQ(c.getFerence(), 2 * M_PI * 1e-10);
   EXPECT_DOUBLE_EQ(c.getArea(), M_PI * 1e-10 * 1e-10);
-  
   c.setRadius(1e10);
   EXPECT_DOUBLE_EQ(c.getRadius(), 1e10);
   EXPECT_DOUBLE_EQ(c.getFerence(), 2 * M_PI * 1e10);
